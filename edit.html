@@ -39,11 +39,17 @@
     <fieldset class="form-group">
     <textarea class="form-control" id="exampleTextarea" rows="5">XXXXXXX</textarea>
     </fieldset>
-    <br>
-    <button class="btn btn-secondary center-block"><i class="fa fa-camera"></i> Take a picture</button>
-    <br>
-    <br>
-    <button class="btn btn-primary center-block">Next</button>
+    <!-- <a href="#" class="btn btn-secondary center-block"><i class="fa fa-camera"></i> Take a picture </a> -->
+   <!--  <input type="file" accept="image/*"> -->
+    <div class="row text-center">
+      <div class="fileUpload btn btn-secondary">
+          <span id="take_picture"><i class="fa fa-camera"></i> Take a picture </span>
+          <input type="file" class="upload" accept="image/*">
+      </div>
+    </div>
+    <div class="row text-center">
+      <a href="send.html" class="btn btn-primary">Next</a>
+    </div>
     </div>
   </div>
 

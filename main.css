@@ -6,14 +6,37 @@
   padding: 2px; /* firefox bug fix */
   width: auto;
 }
-
 #jobId {
   text-align: center;
   color: black;
   font-family:'Vag';
   font-weight: 700;
 }
-
 .space {
   margin: 5px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#take_picture {
+  font-size: 18px;
+ /* border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px;*/
 }
