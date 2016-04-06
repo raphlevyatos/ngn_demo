@@ -1,0 +1,19 @@
+.navbar-brand {
+  padding: 0px; /* firefox bug fix */
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 2px; /* firefox bug fix */
+  width: auto;
+}
+
+#jobId {
+  text-align: center;
+  color: black;
+  font-family:'Vag';
+  font-weight: 700;
+}
+
+.space {
+  margin: 5px;
+}
