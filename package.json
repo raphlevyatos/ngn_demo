@@ -1,0 +1,27 @@
+{
+  "name": "ngn_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphlevyatos/ngn_demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphlevyatos/ngn_demo/issues"
+  },
+  "homepage": "https://github.com/raphlevyatos/ngn_demo#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "mailgun-js": "^0.7.8",
+    "sendgrid": "^2.0.0"
+  }
+}
