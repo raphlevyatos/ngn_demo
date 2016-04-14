@@ -14,16 +14,21 @@ router.get("/details", function(req, res) {
 router.post("/details", function(req, res) {
   var name = req.body.name;
   var email = req.body.email;
+  var comment = req.body.comment
+  res.redirect("/send/:" + email + "/:" + name + "/:" + comment);
 });
 
-router.get("/send", function(req, res) {
+router.get("/send/:email/:name/:comment", function(req, res) {
+  var email_address = (req.params.email).substr(1);
+  var name_customer = (req.params.name).substr(1);
+  var comment_text = (req.params.comment).substr(1);
   fs.readFile('public/images/pipe.jpg', function(err, data) {
     sendgrid.send({
-    to:       'raphael.levy@atos.net',
+    to:       email_address,
     from:     'no-reply@ngn.co.uk',
-    subject:  'Job #12345',
+    subject:  "Job #12345 - " + name_customer,
     files: [{filename: 'pipe.jpg', content: data}],
-    text:     'Job Description XXXXXXXX'
+    text:     comment_text
     }, function(err, json) {
     console.log(err);
     if (err) { return res.send("Error!"); }

@@ -4,28 +4,32 @@
     <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <h3 id="jobId">Job #12345</h3>
         <br>
-        <fieldset class="form-group">
-        <textarea class="form-control" id="exampleTextarea" rows="5">XXXXXXX</textarea>
-        </fieldset>
-        <div class="container-fluid">
-            <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                <img class="img-responsive" src="/images/pipe.jpg" alt="" id="#image">
-            </div>
-        </div>
-        <br>
         <!-- <p id="recipient">To: <b>Ved Sen</b></p> -->
         <form action="/details" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Full Name">
+            <textarea class="form-control" id="exampleTextarea" name="comment" rows="5" placeholder="Add comments..."></textarea>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <img class="img-responsive" src="/images/pipe.jpg" alt="" id="#image">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Full Name" required="true">
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email"placeholder="Email">
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email"placeholder="Email" required="true" data-fv-emailaddress-message="The value is not a valid email address">
             </div>
-            <div class="row text-center">
-                <a href="/" class="btn btn-primary space">Back</a>
-                <a href="/send" class="btn btn-primary space">Send</a>
+            <div class="form-group">
+                <div class="row text-center">
+                    <a href="/" class="btn btn-primary space">Back</a>
+                    <button class="btn btn-primary space">Send</button>
+                </div>
             </div>
         </form>
+
     </div>
   </div>
 
