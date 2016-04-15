@@ -27,7 +27,7 @@ router.get("/send/:email/:name/:comment", function(req, res) {
     to:       email_address,
     from:     'no-reply@ngn.co.uk',
     subject:  "Job #12345 - " + name_customer,
-    files: [{filename: 'pipe.jpg', content: data}],
+    files: [{filename: 'picture.jpg', content: data}],
     text:     comment_text
     }, function(err, json) {
     console.log(err);

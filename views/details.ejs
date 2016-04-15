@@ -4,18 +4,38 @@
     <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <h3 id="jobId">Job #12345</h3>
         <br>
-        <!-- <p id="recipient">To: <b>Ved Sen</b></p> -->
         <form action="/details" method="post">
-            <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" name="comment" rows="5" placeholder="Add comments..."></textarea>
-            </div>
-            <br>
-            <div class="container-fluid">
-                <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                    <img class="img-responsive" src="/images/pipe.jpg" alt="" id="#image">
+        <div class="row text-center">
+                    <div class="container-fluid">
+                            <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                                <img id="preview" alt="No image uploaded yet" src="placeholder.png" height="auto" width="100%" />
+                            </div>
+                    </div>
                 </div>
-            </div>
+                <div class="row text-center">
+                    <div class="fileUpload btn btn-secondary">
+                        <span id="take_picture"><i class="fa fa-camera"></i> Add a picture </span>
+                        <input type="file" class="upload" name="image" onchange="previewImage(this)" accept="image/*"/>
+                        <script type="text/javascript">
+                          function previewImage(input) {
+                            var preview = document.getElementById('preview');
+                            if (input.files && input.files[0]) {
+                              var reader = new FileReader();
+                              reader.onload = function (e) {
+                                preview.setAttribute('src', e.target.result);
+                              }
+                              reader.readAsDataURL(input.files[0]);
+                            } else {
+                              preview.setAttribute('src', 'placeholder.png');
+                            }
+                          }
+                        </script>
+                    </div>
+                </div>
             <br>
+            <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" name="comment" rows="5" placeholder="Add comments..." required="true"></textarea>
+            </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Full Name" required="true">
             </div>
