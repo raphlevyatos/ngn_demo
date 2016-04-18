@@ -4,7 +4,7 @@
     <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <h3 id="jobId">Job #12345</h3>
         <br>
-        <form action="/details" method="post">
+        <form action="/details" method="post" enctype="multipart/form-data">
         <div class="row text-center">
                     <div class="container-fluid">
                             <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -15,7 +15,7 @@
                 <div class="row text-center">
                     <div class="fileUpload btn btn-secondary">
                         <span id="take_picture"><i class="fa fa-camera"></i> Add a picture </span>
-                        <input type="file" class="upload" name="image" onchange="previewImage(this)" accept="image/*"/>
+                        <input type="file" class="upload" name="displayImage" onchange="previewImage(this)" accept="image/*"/>
                         <script type="text/javascript">
                           function previewImage(input) {
                             var preview = document.getElementById('preview');
@@ -40,12 +40,12 @@
                 <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Full Name" required="true">
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" name="email"placeholder="Email" required="true" data-fv-emailaddress-message="The value is not a valid email address">
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email" required="true" data-fv-emailaddress-message="The value is not a valid email address">
             </div>
             <div class="form-group">
                 <div class="row text-center">
                     <a href="/" class="btn btn-primary space">Back</a>
-                    <button class="btn btn-primary space">Send</button>
+                    <input type="submit" class="btn btn-primary space" value="Send"></input>
                 </div>
             </div>
         </form>

@@ -22,8 +22,13 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "fs": "0.0.2",
+    "http": "0.0.0",
     "mailgun-js": "^0.7.8",
+    "method-override": "^2.3.5",
+    "multer": "^1.1.0",
+    "multipart": "^0.1.5",
     "nodemon": "^1.9.1",
+    "path": "^0.12.7",
     "sendgrid": "^2.0.0"
   }
 }
