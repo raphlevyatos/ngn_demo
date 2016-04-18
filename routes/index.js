@@ -21,22 +21,14 @@ router.post("/details", multer({ dest: './uploads/'}).single('displayImage'), fu
   var name = req.body.name;
   var email = req.body.email;
   var comment = req.body.comment;
-  var displayImage = req.body.displayImage;
-  console.log(name);
-  console.log(email);
-  console.log(comment);
-  console.log(displayImage);
-  console.log(req.file);
-  console.log(req.file.path);
   fs.readFile(req.file.path, function(err, data) {
     sendgrid.send({
     to:       email,
     from:     'no-reply@ngn.co.uk',
     subject:  "Job #12345 - " + name,
-    files: [{filename: "image", content: data}],
+    files: [{filename: req.file.originalname, content: data}],
     text:     comment
     }, function(err, json) {
-    console.log(err);
     if (err) { return res.send("Error!"); }
     res.render("results");
     });
