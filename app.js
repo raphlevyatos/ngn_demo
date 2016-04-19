@@ -4,6 +4,7 @@ var express         = require("express"),
     path = require('path');
 
 var app = new express();
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.set("view engine", "ejs");
