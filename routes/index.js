@@ -21,8 +21,6 @@ router.post("/", function(req, res){
 router.get("/details/:email/:name", function(req, res) {
     var email = req.params.email;
     var name = req.params.name;
-    console.log(name);
-    console.log(email);
     res.render("details", {email, name});
 });
 
